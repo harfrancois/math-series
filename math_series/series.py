@@ -24,7 +24,14 @@ def lucas(n):
 
     return b
 
+
 print(lucas(29))
 
-def sum_series()
 
+def sum_series(n, first_number=0, second_number=1):
+    if n == 1:
+        return first_number
+    elif n == 2:
+        return second_number
+    else:
+        return sum_series(n - 2, first_number, second_number) + sum_series(n - 1, first_number, second_number)
